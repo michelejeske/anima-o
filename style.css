@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+body{
+background-image: url(https://cdn.pixabay.com/photo/2021/01/08/13/38/road-5899921_1280.png);
+background-size: cover;
+background-position: top;
+overflow: hidden;
+}
+
+img{
+width: 180px;
+position: absolute;
+bottom: 5px;
+/* animation-name: move;
+animation-duration: 5s;
+animation-timing-function:ease-in-out;
+animation-delay: .5s;
+animation-iteration-count:3;
+animation-direction: alternate;
+animation-fill-mode: both;
+animation-play-state: running; */
+
+animation: move 5s ease;
+}
+
+img:hover{
+animation-play-state: paused;
+}
+
+@keyframes move {
+from{
+transform: translateX(0);
+}    
+
+to{
+transform: translateX(calc(100vw - 180px));
+}
+}
